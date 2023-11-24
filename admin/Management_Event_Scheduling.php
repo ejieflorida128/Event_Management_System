@@ -245,11 +245,11 @@ include("../conn/connection.php");
    <script>
 
         $(document).ready(function () {
-                DisplayLog(null);
+            DisplayLogR(null);
                 $("#searchDate").on('input', function () {
                     var value = $(this).val();
 
-                    DisplayLog(value);
+                    DisplayLogR(value);
                
                     
                     
