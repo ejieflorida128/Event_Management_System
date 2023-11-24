@@ -121,11 +121,11 @@ include("../conn/connection.php");
 
     <script>
                $(document).ready(function () {
-                DisplayTeamScoreASC(null);
+                DisplayTeamScoreDESC(null);
                 $("#searchDate").on('input', function () {
                     var value = $(this).val();
 
-                    DisplayTeamScoreASC(value);
+                    DisplayTeamScoreDESC(value);
                
                     
                     
