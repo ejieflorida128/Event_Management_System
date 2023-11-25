@@ -9,5 +9,7 @@
     margin: 0px;
     height: 60px;
     align-items: center;
+    position: absolute;
+    bottom: 0px;
     
 }
