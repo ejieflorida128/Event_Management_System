@@ -82,11 +82,11 @@
 
     <script>
                $(document).ready(function () {
-                displayEventListASC(null);
+                displayEventListDESC(null);
                 $("#searchDate").on('input', function () {
                     var value = $(this).val();
 
-                    displayEventListASC(value);
+                    displayEventListDESC(value);
                
                     
                     
