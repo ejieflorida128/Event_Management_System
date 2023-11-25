@@ -57,9 +57,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <div class="login form">
       <header>Login</header>
       <form action="index.php" method = "post">
-        <input type="text" placeholder="Enter your username" name = "username">
-        <input type="password" placeholder="Enter your password" name = "password">
-       
+        <input type="text" placeholder="Username" name = "username">
+        <input type="password" placeholder="Password" name = "password">       
         <input type="submit" class="button" value="Login">
       </form>
       <div class="signup">
