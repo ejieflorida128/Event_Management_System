@@ -148,11 +148,14 @@
          
 
 
-            $sql = "INSERT INTO report (user_id,TeamOne,TeamTwo,Date,Time,Location) VALUES ('$user_id','$reportTeamOne','$reportTeamTwo','$reportDate','$reportTime','$reportLocation')";
-            mysqli_query($conn,$sql);
-            
-            alert('You have successfully reported it!');
+            $sql = "INSERT INTO report (user_id, TeamOne, TeamTwo, Date, Time, Location) VALUES ('$user_id', '$reportTeamOne', '$reportTeamTwo', '$reportDate', '$reportTime', '$reportLocation')";
+mysqli_query($conn, $sql);
+
+echo '<script>';
+echo 'alert("You have successfully reported it!");';
+echo '</script>';
     }
+
 
 
 
@@ -200,7 +203,7 @@
         echo '<div style="max-height: 400px; max-width: 1000px; font-size: 11px; position: relative; left: 220px; top: 130px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
-                <tr> 
+                <tr>
                 <th scope="col" class="text-center align-middle">Event No.</th>
                 <th scope="col" class="text-center align-middle" onclick = "DESC()">Date</th>
                 <th scope="col" class="text-center align-middle">Match</th>
@@ -383,7 +386,7 @@
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
     
-        echo '<div style="max-height: 400px; max-width: 1000px; font-size: 11px; position: relative; left: 220px; top: 130px; overflow-y: auto; " class="table">';
+        echo '<div style="max-height: 400px; max-width: 1169px; font-size: 11px; position: relative; left: 90px; top: 130px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
                 <tr> 
@@ -442,7 +445,7 @@
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
     
-        echo '<div style="max-height: 400px; max-width: 1000px; font-size: 11px; position: relative; left: 220px; top: 130px; overflow-y: auto; " class="table">';
+        echo '<div style="max-height: 400px; max-width: 1169px; font-size: 11px; position: relative; left: 90px; top: 130px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
                 <tr> 
