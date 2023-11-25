@@ -1,5 +1,6 @@
 body{
     background-color: white;
+    overflow:hidden;
 }
 
 .box{
@@ -11,15 +12,23 @@ body{
     4px 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     padding: 20px;
-    margin:50px;
+    margin:20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    right: 20px;
    
 }
 
 .con1{
-    margin-top: -30px;
+    position: relative;
+    top:40px;
+}
+
+.con2{
+    position: relative;
+    top: 20px;
 }
 
 .con1,.con2{
