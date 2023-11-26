@@ -112,7 +112,14 @@ body {
 }
 
 .seePass{
-  position: relative;
-  top: -60px;
-  left: 300px;
+  position: absolute;
+  top: 205px;
+  left: 350px;
+  
+}
+
+.user{
+  position: absolute;
+  top: 120px;
+  left: 350px;
 }
