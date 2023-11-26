@@ -1,5 +1,6 @@
 <?php
     include("../includes/user_sidebar.php");
+    include("../includes/footer.php");
 
 ?>
 <!DOCTYPE html>
