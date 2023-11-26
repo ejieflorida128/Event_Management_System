@@ -1,6 +1,7 @@
 <?php
 include("../includes/admin_sidebar.php");
 include("../conn/connection.php");
+include("../includes/footer.php");
 
 ?>
 

@@ -1,9 +1,6 @@
 <?php
 include("../includes/user_sidebar.php");
 include("../conn/connection.php");
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
