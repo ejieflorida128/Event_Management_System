@@ -491,7 +491,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
     
-        echo '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 130px; overflow-y: auto; " class="table">';
+        echo '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 90px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
                 <tr> 
@@ -564,7 +564,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
     
-        echo '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 130px; overflow-y: auto; " class="table">';
+        echo '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 90px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
                 <tr> 
@@ -711,7 +711,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
     
         echo 
-            '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 130px; overflow-y: auto; " class="table">';
+            '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 90px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
                 <tr> 
@@ -771,7 +771,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
     
         echo  
-            '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 130px; overflow-y: auto; " class="table">';
+            '<div style="max-height: 400px; max-width: 1113px; font-size: 11px; position: relative; left: 122px; top: 90px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
                 <tr> 
