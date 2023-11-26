@@ -30,10 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }
 
     if($check == 0){
-      echo "
-               <script>alert('Account Didn\'t Exist or Not found in the Database!');</script>
-        ";
-
+      $showModal = true;
     }else if($check == 1){
       header("Location: user/User_Dashboard.php");
     }else if($check == 2){
@@ -81,7 +78,46 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     </div>
   </div>
 
-  <script>
+  <?php
+    if (isset($showModal) && $showModal) {
+    ?>
+        <div class='modal' tabindex='-1' role='dialog' style = ' position: relative; top: 180px; '>
+            <div class='modal-dialog'>
+                <div class='modal-content'>
+                    <div class='modal-header'>
+                        <h5 class='modal-title'>SYSTEM</h5>
+                        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                    </div>
+                    <div class='modal-body'>
+                        <p>Account didn't exist or not Registered yet!</p>
+                    </div>
+                    <div class='modal-footer'>
+                        <button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Close</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Use JavaScript to show the modal after the page is loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                var myModal = new bootstrap.Modal(document.querySelector('.modal'));
+                myModal.show();
+            });
+        </script>
+
+       
+    <?php
+    }
+    ?>
+
+
+
+
+
+<script>
     document.getElementById('seePass').addEventListener('change', function () {
         var passwordInput = document.getElementById('password');
         if (this.checked) {
@@ -90,10 +126,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             passwordInput.type = 'password';
         }
     });
-  </script>
+</script>
 
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-GLhlTQ8iKt6vXvzttzK4+OqjL+6d66t2ayxu/8PUHjOpG8WUmNu2Ck6Z5mmg5I62" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
