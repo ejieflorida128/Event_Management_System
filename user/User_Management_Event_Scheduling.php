@@ -33,7 +33,7 @@ include("../includes/footer.php");
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit Information</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">User Request Form</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick = "refreshIfClose()"></button>
                 </div>
                 <div class="modal-body">
