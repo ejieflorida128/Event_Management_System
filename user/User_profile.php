@@ -65,6 +65,9 @@ include("../conn/connection.php");
                     <input type = "text" name = "gmail" id = "gmail" class = "form-control">                   
             </div>
 
+            <input type="hidden" value="<?php echo $_SESSION['id']; ?>" id = "userId">
+
+
             <button class = "btn btn-success" id = "editBtn" value = "click" onclick = "editprofile()">CONFIRM EDIT</button>
     </div>
 
@@ -149,6 +152,28 @@ include("../conn/connection.php");
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+
+// if ready automatic mo suwat ang data sa database
+$(document).ready(function () {
+
+    var id = $('#userId').val();
+
+        $.post("../ajax/user_ajax.php", { userProfileId: id }, function(data, status) {
+                        console.log(data); // Log the raw response to the console
+
+                        var userID = JSON.parse(data);
+
+                        $('#fname').val(userID.fullname);
+                        $('#age').val(userID.age);
+                        $('#gmail').val(userID.gmail);
+                      
+                    });
+            });
+
+
+
+
+
 
         function editprofile(){
 

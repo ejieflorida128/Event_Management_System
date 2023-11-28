@@ -190,6 +190,27 @@
 
 
 
+    //para ne makita ang data gikan sa database if mag kuan sa user's profile
+
+    if(isset($_POST['userProfileId'])){
+        $user_id = $_POST['userProfileId'];
+
+        $sql = "SELECT * FROM users WHERE id = $user_id";
+        $result = mysqli_query($conn,$sql);
+        $response = array();
+
+        while($row = mysqli_fetch_assoc($result)){
+            $response = $row;
+        }
+
+        echo json_encode($response);
+    }else{
+        $response['status'] =   200;
+        $response['message'] = "Invalid or Data Information!";
+    }
+
+
+
 
 
 
@@ -577,6 +598,10 @@
     }
     
     
+
+
+
+
 
 
 
