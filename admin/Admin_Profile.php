@@ -56,6 +56,27 @@
             <!-- generated table -->
         </div>
 
+
+        <!-- Modal -->
+<div class="modal fade" id="confirmDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style = "position: relative; top: -300px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Notice!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                    Are you sure to delete this profile?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success" onclick = "toDelete()">Confirm Delete</button>
+        <input type = "hidden" id = "deleteValue">
+      </div>
+    </div>
+  </div>
+</div>
+
         
     </div>
 
@@ -128,6 +149,16 @@
 
             //function for deleting an user in profile!
         function DeleteUserInProfile(id){
+
+          $('#deleteValue').val(id);
+          $('#confirmDelete').modal('show');
+          
+        }
+
+        function toDelete(){
+
+            var id = $('#deleteValue').val();
+
             $.ajax({
                     url: "../ajax/admin_ajax.php",
                     type: 'post',
