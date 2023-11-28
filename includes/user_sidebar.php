@@ -97,14 +97,14 @@ session_start();
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="../user/User_Dashboard.php">
-                            <i class='bx bx-user icon'></i>
+                        <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
                         <a href="../user/User_profile.php">
-                            <i class='bx bx-home-alt icon' ></i>
+                            <i class='bx bx-user icon'></i>
                             <span class="text nav-text">Profile</span>
                         </a>
                     </li>
