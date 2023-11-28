@@ -255,7 +255,7 @@ include("../includes/footer.php");
       </div>
     </div>
   </div>
-</div>
+</div>  
 
 
 

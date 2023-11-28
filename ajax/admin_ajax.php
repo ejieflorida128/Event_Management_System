@@ -57,8 +57,8 @@
 
 
 
-   // Ajax for displaying the log_info table and search ASC
-    if (isset($_POST['log_info']) && $_POST['log_info'] == true) {
+ // Ajax for displaying the log_info table and search ASC
+if (isset($_POST['log_info']) && $_POST['log_info'] == true) {
     // Check if searchValue is set and not empty
     $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
 
@@ -86,37 +86,40 @@
     $result = mysqli_query($conn, $sql);
     $number = 1;
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        $id = $row['id'];
-        $teamOne = $row['TEAMONE'];
-        $teamTwo = $row['TEAMTWO'];
-        $date = $row['DATE'];
-        $time =  $row['TIME'];
-        $location = $row['LOCATION'];
-      
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id = $row['id'];
+            $teamOne = $row['TEAMONE'];
+            $teamTwo = $row['TEAMTWO'];
+            $date = $row['DATE'];
+            $time =  $row['TIME'];
+            $location = $row['LOCATION'];
 
-        $table .= '<tr>
-            <td scope="row" class="text-center align-middle">' . $number . '</td>
-            <td scope="row" class="text-center align-middle">' . $teamOne . '</td>
-            <td class="text-center align-middle">' . $teamTwo . '</td>
-            <td class="text-center align-middle">' . $date . '</td>
-            <td class="text-center align-middle">' . $time . '</td>
-            <td class="text-center align-middle">' . $location . '</td>
-            <td class="text-center align-middle">
-                    <button class = "btn btn-success" onclick = "ShowDetailsForEditBtn('. $id .')">EDIT</button>
-                    <button onclick = "DeleteEvent('. $id .')" class = "btn  btn-danger">DELETE</button>
-            </td>
-        </tr>';
+            $table .= '<tr>
+                <td scope="row" class="text-center align-middle">' . $number . '</td>
+                <td scope="row" class="text-center align-middle">' . $teamOne . '</td>
+                <td class="text-center align-middle">' . $teamTwo . '</td>
+                <td class="text-center align-middle">' . $date . '</td>
+                <td class="text-center align-middle">' . $time . '</td>
+                <td class="text-center align-middle">' . $location . '</td>
+                <td class="text-center align-middle">
+                        <button class="btn btn-success" onclick="ShowDetailsForEditBtn(' . $id . ')">EDIT</button>
+                        <button onclick="DeleteEvent(' . $id . ')" class="btn btn-danger">DELETE</button>
+                </td>
+            </tr>';
 
-        $number++;
-
-
+            $number++;
+        }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="7" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
     }
 
     $table .= '</tbody></table>';
     echo $table;
     echo '</div>';
 }
+
 
 // Ajax for displaying the log_info table and search DESC
 if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
@@ -149,31 +152,33 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     $result = mysqli_query($conn, $sql);
     $number = 1;
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        $id = $row['id'];
-        $teamOne = $row['TEAMONE'];
-        $teamTwo = $row['TEAMTWO'];
-        $date = $row['DATE'];
-        $time =  $row['TIME'];
-        $location = $row['LOCATION'];
-      
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id = $row['id'];
+            $teamOne = $row['TEAMONE'];
+            $teamTwo = $row['TEAMTWO'];
+            $date = $row['DATE'];
+            $time =  $row['TIME'];
+            $location = $row['LOCATION'];
 
-        $table .= '<tr>
-            <td scope="row" class="text-center align-middle">' . $number . '</td>
-            <td scope="row" class="text-center align-middle">' . $teamOne . '</td>
-            <td class="text-center align-middle">' . $teamTwo . '</td>
-            <td class="text-center align-middle">' . $date . '</td>
-            <td class="text-center align-middle">' . $time . '</td>
-            <td class="text-center align-middle">' . $location . '</td>
-            <td class="text-center align-middle">
-                    <button class = "btn btn-success" onclick = "ShowDetailsForEditBtn('. $id .')">EDIT</button>
-                    <button onclick = "DeleteEvent('. $id .')" class = "btn  btn-danger">DELETE</button>
-            </td>
-        </tr>';
+            $table .= '<tr>
+                <td scope="row" class="text-center align-middle">' . $number . '</td>
+                <td scope="row" class="text-center align-middle">' . $teamOne . '</td>
+                <td class="text-center align-middle">' . $teamTwo . '</td>
+                <td class="text-center align-middle">' . $date . '</td>
+                <td class="text-center align-middle">' . $time . '</td>
+                <td class="text-center align-middle">' . $location . '</td>
+                <td class="text-center align-middle">
+                        <button class="btn btn-success" onclick="ShowDetailsForEditBtn(' . $id . ')">EDIT</button>
+                        <button onclick="DeleteEvent(' . $id . ')" class="btn btn-danger">DELETE</button>
+                </td>
+            </tr>';
 
-        $number++;
-
-
+            $number++;
+        }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="7" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
     }
 
     $table .= '</tbody></table>';
@@ -218,6 +223,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
 
             $reportId = $row['id'];
@@ -238,6 +244,10 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     
             $number++;
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="7" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -335,6 +345,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $profilePic = $row['profile'];
@@ -377,6 +388,10 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -414,6 +429,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
          $result = mysqli_query($conn, $sql);
          $number = 1;
      
+         if (mysqli_num_rows($result) > 0) {
          while ($row = mysqli_fetch_assoc($result)) {
              $id = $row['id'];
              $profilePic = $row['profile'];
@@ -456,6 +472,10 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
      
      
          }
+        } else {
+            // If no data, display a row with "No Data Information"
+            $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+        }
      
          $table .= '</tbody></table>';
          echo $table;
@@ -513,6 +533,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -553,6 +574,10 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -586,6 +611,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -626,6 +652,10 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -733,6 +763,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -759,6 +790,10 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -793,6 +828,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -819,6 +855,10 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
