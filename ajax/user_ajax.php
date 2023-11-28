@@ -36,6 +36,7 @@
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+    if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -62,6 +63,10 @@
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -99,6 +104,7 @@
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+    if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -125,6 +131,10 @@
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -244,6 +254,7 @@
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -286,12 +297,17 @@
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
         echo '</div>';
     }
     
+
     // Ajax for displaying the teamScore table and search DESC
     if (isset($_POST['displayTeamScoreDESC']) && $_POST['displayTeamScoreDESC'] == true) {
         // Check if searchValue is set and not empty
@@ -320,6 +336,7 @@
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -362,6 +379,10 @@
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -429,6 +450,7 @@
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -455,6 +477,10 @@
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
@@ -488,6 +514,7 @@
         $result = mysqli_query($conn, $sql);
         $number = 1;
     
+        if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
             $teamOne = $row['TEAMONE'];
@@ -514,6 +541,10 @@
     
     
         }
+    } else {
+        // If no data, display a row with "No Data Information"
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+    }
     
         $table .= '</tbody></table>';
         echo $table;
