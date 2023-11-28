@@ -110,4 +110,11 @@ li a i{
     letter-spacing: 2px;
 }
 
+.slot{
+    background-color:rgb(111, 111, 216);
+    padding: 5px;
+    border-radius: 30px;
+    color: white;
+}
+
 
