@@ -86,6 +86,28 @@ include("../includes/footer.php");
         </div>
     </div>
 
+
+
+
+    <!-- modal for successful request -->
+    <div class="modal" tabindex="-1" id = "reportSuccess" style = "position: relative; top: -200px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Notice!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Your request has been successfully sent for approval.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick = " refreshIfClose()">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
    
@@ -157,11 +179,26 @@ include("../includes/footer.php");
 
             //ajax funtion for view button
             function ReportEvent(id){
-                        $('#report_modal').modal('show');
-                        var user_id = id;
-                        $('#dataforreport').val(user_id);
-                        
                        
+                       
+                        $('#dataforreport').val(id);
+                      
+
+                        $.post("../ajax/user_ajax.php", { idRequest: id }, function(data, status) {
+                                console.log(data); // Log the raw response to the console
+
+                                var details = JSON.parse(data);
+
+                                $('#reportTeamOne').val(details.TEAMONE);
+                                $('#reportTeamTwo').val(details.TEAMTWO);                              
+                                $('#reportDate').val(details.DATE);
+                                $('#reportTime').val(details.TIME);
+                                $('#reportLocation').val(details.LOCATION);
+                               
+                                
+                            });
+                        
+                            $('#report_modal').modal('show'); 
                       
             }
 
@@ -190,7 +227,9 @@ include("../includes/footer.php");
                         },
                         success: function (data, status) {
                             $('#report_modal').modal('hide');
-                            refreshIfClose()
+                           
+                            $('#reportSuccess').modal('show');
+                            
                         }
 
                     });
@@ -203,12 +242,7 @@ include("../includes/footer.php");
 
        
 
-        //always print the table when ready!
-        $(document).ready(function () {
-            DisplayLog();
-
-          
-        });
+       
     </script>
 
 

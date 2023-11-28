@@ -2,6 +2,9 @@
     include("../conn/connection.php");
     session_start();
 
+
+   
+
    
         
    // Ajax for displaying the log_info table and search ASC
@@ -134,6 +137,24 @@
 
 
 
+    // request and showing data gikan database para makita unsay editon
+    if(isset($_POST['idRequest'])){
+        $user_id = $_POST['idRequest'];
+
+        $sql = "SELECT * FROM log_info WHERE id = $user_id";
+        $result = mysqli_query($conn,$sql);
+        $response = array();
+
+        while($row = mysqli_fetch_assoc($result)){
+            $response = $row;
+        }
+
+        echo json_encode($response);
+    }else{
+        $response['status'] =   200;
+        $response['message'] = "Invalid or Data Information!";
+    }
+
 
 
     //ajax para ma process and report sa user or player
@@ -149,11 +170,11 @@
 
 
             $sql = "INSERT INTO report (user_id, TeamOne, TeamTwo, Date, Time, Location) VALUES ('$user_id', '$reportTeamOne', '$reportTeamTwo', '$reportDate', '$reportTime', '$reportLocation')";
-mysqli_query($conn, $sql);
+                mysqli_query($conn, $sql);
 
-echo '<script>';
-echo 'alert("You have successfully reported it!");';
-echo '</script>';
+                echo '<script>';
+                echo 'alert("You have successfully reported it!");';
+                echo '</script>';
     }
 
 
