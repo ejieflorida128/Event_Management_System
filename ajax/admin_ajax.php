@@ -141,7 +141,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
             <tbody>';
 
     if (!empty($value)) {        
-        $sql = "SELECT * FROM log_info WHERE DATE '$value' ORDER BY DATE DESC";
+        $sql = "SELECT * FROM log_info WHERE DATE = '$value' ORDER BY DATE DESC";
     } else {
         $sql = "SELECT * FROM log_info ORDER BY DATE DESC";
     }
