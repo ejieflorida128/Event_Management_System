@@ -61,16 +61,16 @@
             <div class="menu">
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="../admin/Admin_Profile.php">
+                        <a href="../admin/Admin_Dashboard.php">
                             <i class='bx bx-user icon'></i>
-                            <span class="text nav-text">Profile</span>
+                            <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="../admin/Admin_Dashboard.php">
+                        <a href="../admin/Admin_Profile.php">
                             <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboard</span>
+                            <span class="text nav-text">Profile</span>
                         </a>
                     </li>
 
