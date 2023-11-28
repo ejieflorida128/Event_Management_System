@@ -50,7 +50,7 @@
                 <td class="text-center align-middle">' . $time . '</td>
                 <td class="text-center align-middle">' . $location . '</td>
                 <td class="text-center align-middle">
-                        <button class = "btn btn-danger" onclick = "ReportEvent('. $id .')">REQUEST</button>
+                        <button class = "btn btn-success" onclick = "ReportEvent('. $id .')">REQUEST</button>
                         
                 </td>
             </tr>';
@@ -72,7 +72,7 @@
     
       
     
-        echo '<div style="max-height: 400px; max-width: 1200px; font-size: 11px; position: relative; left: 40px; top: 150px; overflow-y: auto; " class="table">';
+        echo '<div style="max-height: 400px; max-width: 1200px; font-size: 11px; position: relative; left: 40px; top: 210px; overflow-y: auto; " class="table">';
         $table = '<table class="table table-bordered table-hover">
                 <thead class="table-dark" id="table-header" style="position: sticky; top: 0; background-color: #343a40; color: white;">
                 <tr> 
@@ -113,8 +113,8 @@
                 <td class="text-center align-middle">' . $time . '</td>
                 <td class="text-center align-middle">' . $location . '</td>
                 <td class="text-center align-middle">
-                        <button class = "btn btn-success" onclick = "ShowDetailsForEditBtn('. $id .')">EDIT</button>
-                        <button onclick = "DeleteEvent('. $id .')" class = "btn  btn-danger">DELETE</button>
+                <button class = "btn btn-success" onclick = "ReportEvent('. $id .')">REQUEST</button>
+                        
                 </td>
             </tr>';
     
