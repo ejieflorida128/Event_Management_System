@@ -95,35 +95,35 @@ session_start();
         <div class="menu-bar">
             <div class="menu">
                 <ul class="menu-links">
-                    <li class="nav-link">
+                    <li class="nav-link" id = "dashboard">
                         <a href="../user/User_Dashboard.php">
                         <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "profile">
                         <a href="../user/User_profile.php">
                             <i class='bx bx-user icon'></i>
                             <span class="text nav-text">Profile</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "eList">
                         <a href="../user/User_Eventlist.php">
                             <i class='bx bx-calendar icon'></i>
                             <span class="text nav-text">Event List</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "management">
                         <a href="../user/User_Management_Event_Scheduling.php">
                             <i class='bx bx-cog icon'></i>
                             <span class="text nav-text">Manage Event</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "tScore">
                         <a href="../user/User_teamScore.php">
                             <i class='bx bx-trophy icon'></i>
                             <span class="text nav-text">All Team Score</span>

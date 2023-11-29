@@ -111,10 +111,18 @@ li a i{
 }
 
 .slot{
-    background-color:rgb(111, 111, 216);
+    box-shadow:
+    4px 0 10px rgba(0, 0, 0, 0.2),
+    0 4px 10px rgba(0, 0, 0, 0.2),  
+    4px 0 10px rgba(0, 0, 0, 0.2);
     padding: 5px;
-    border-radius: 30px;
-    color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+#profile{
+    background-color: #695CFE;
+    border-radius: 10px;
 }
 
 

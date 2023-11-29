@@ -60,14 +60,14 @@
         <div class="menu-bar">
             <div class="menu">
                 <ul class="menu-links">
-                    <li class="nav-link">
+                    <li class="nav-link" id = "dashboard">
                         <a href="../admin/Admin_Dashboard.php">
                         <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "profile">
                         <a href="../admin/Admin_Profile.php">
                            
                             <i class='bx bx-user icon'></i>
@@ -75,21 +75,21 @@
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "eList">
                         <a href="../admin/admin_eventlist.php">
                             <i class='bx bx-calendar icon'></i>
                             <span class="text nav-text">Event List</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "management">
                         <a href="../admin/Management_Event_Scheduling.php">
                             <i class='bx bx-cog icon'></i>
                             <span class="text nav-text">Manage Event</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <li class="nav-link" id = "tScore">
                         <a href="../admin/admin_teamScore.php">
                             <i class='bx bx-trophy icon'></i>
                             <span class="text nav-text">All Team Score</span>
