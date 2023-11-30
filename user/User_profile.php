@@ -36,7 +36,7 @@ include("../includes/footer.php");
 
                 
                 
-            ?>">
+            ?>" id="profilePreview">
 
             <div class = "changeProfileButton">
                     <label for="changeProfile">
@@ -47,7 +47,7 @@ include("../includes/footer.php");
                     </label>
 
 
-                    <input type = "file" id = "changeProfile" name = "changePicValue" value = "profilePic">
+                    <input type = "file" id = "changeProfile" name = "changePicValue" value = "profilePic" onchange="previewProfile()">
 
             </div>
 
@@ -214,17 +214,44 @@ $(document).ready(function () {
         }
 
 
+
+
+ // para ma reload ang file if click
+        function refreshIfClose(){
+                        location.reload();
+                    }
+
+
+
+
+
+
+// for prevwieing profile
+        function previewProfile() {
+            var input = document.getElementById('changeProfile');
+            var preview = document.getElementById('profilePreview');
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
     </script>
 
 
 
 
 
-            <!-- function pra inig click sa close mo reload sija -->
+           
              <script>
-                    function refreshIfClose(){
-                        location.reload();
-                    }
+                 
              </script>
    
 </body>
