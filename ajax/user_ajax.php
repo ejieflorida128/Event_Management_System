@@ -65,7 +65,7 @@
         }
     } else {
         // If no data, display a row with "No Data Information"
-        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: #d95f57;">No Data Information</td></tr>';
     }
     
         $table .= '</tbody></table>';
@@ -133,7 +133,7 @@
         }
     } else {
         // If no data, display a row with "No Data Information"
-        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: #d95f57;">No Data Information</td></tr>';
     }
     
         $table .= '</tbody></table>';
@@ -320,7 +320,7 @@
         }
     } else {
         // If no data, display a row with "No Data Information"
-        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: #d95f57;">No Data Information</td></tr>';
     }
     
         $table .= '</tbody></table>';
@@ -402,7 +402,7 @@
         }
     } else {
         // If no data, display a row with "No Data Information"
-        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: #d95f57;">No Data Information</td></tr>';
     }
     
         $table .= '</tbody></table>';
@@ -500,7 +500,7 @@
         }
     } else {
         // If no data, display a row with "No Data Information"
-        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: #d95f57;">No Data Information</td></tr>';
     }
     
         $table .= '</tbody></table>';
@@ -564,7 +564,7 @@
         }
     } else {
         // If no data, display a row with "No Data Information"
-        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: lightblue;">No Data Information</td></tr>';
+        $table .= '<tr><td colspan="8" class="text-center" style = "font-size: 20px; letter-spacing: 4px; background-color: #d95f57;">No Data Information</td></tr>';
     }
     
         $table .= '</tbody></table>';
