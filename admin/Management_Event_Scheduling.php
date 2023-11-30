@@ -259,6 +259,30 @@ include("../includes/footer.php");
 
 
 
+
+
+
+<!-- modal for notif for succesful edit -->
+<div class="modal" tabindex="-1" id = "successModal" style = "margin-top: 100px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Notice!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>You have Successfully Edited an Information Datasets</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick = " refreshIfClose()">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
         <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
@@ -434,8 +458,9 @@ include("../includes/footer.php");
                 },function(data,status){
                     
                     $('#edit_modal').modal('hide');
+                    $('#successModal').modal('show');
                     DisplayLog();
-                    refreshIfClose();
+                    
                 });
 
             }
