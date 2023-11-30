@@ -8,7 +8,7 @@
     margin-top: -40px;
     margin-left: 160px;
     position: relative;
-    top: 65px;
+    top: 50px;
     border-radius: 30px;
 }
 
@@ -111,7 +111,7 @@ li a i{
     4px 0 10px rgba(0, 0, 0, 0.2);
     width: 410px;
     position: absolute;
-    top: 27px;
+    top: 10px;
     left: 820px;
     border-radius: 30px;
     height: 270px;
@@ -126,7 +126,7 @@ li a i{
     4px 0 10px rgba(0, 0, 0, 0.2);
     width: 410px;
     position: absolute;
-    top: 343px;
+    top: 331px;
     left: 820px;
     border-radius: 30px;
     height: 270px;

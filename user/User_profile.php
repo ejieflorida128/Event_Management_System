@@ -1,6 +1,7 @@
 <?php
 include("../includes/user_sidebar.php");
 include("../conn/connection.php");
+include("../includes/footer.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
