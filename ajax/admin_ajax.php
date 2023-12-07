@@ -204,7 +204,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
     
-    //table para sa reportLOg
+    //table para sa request log
      if (isset($_POST['TableReportLog']) && $_POST['TableReportLog'] == true) {
         echo '<div class="table scrollable-table">';
         $table = '<table class="table table-bordered table-hover">
@@ -254,7 +254,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         echo '</div>';
     }
 
-    //hadndling the function to display the information para sa report log
+    //hadndling the function to display the information para sa request log
     if(isset($_POST['report_id'])){
 
         $r = $_POST['report_id'];
@@ -275,7 +275,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     }
 
 
-    //delete funtion para sa report log
+    //delete funtion para sa request log
     if(isset($_POST['todelete'])){
         $id = $_POST['todelete'];
 
@@ -283,7 +283,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         mysqli_query($conn,$sql);
     }
 
-    // para confirm sa report log
+    // para confirm sa request log
 
     if(isset($_POST['toConfirmLog'])){
         

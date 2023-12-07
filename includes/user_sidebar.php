@@ -116,17 +116,19 @@ session_start();
                         </a>
                     </li>
 
-                    <li class="nav-link" id = "management">
-                        <a href="../user/User_Management_Event_Scheduling.php">
-                            <i class='bx bx-cog icon'></i>
-                            <span class="text nav-text">Manage Event</span>
-                        </a>
-                    </li>
+                  
 
                     <li class="nav-link" id = "tScore">
                         <a href="../user/User_teamScore.php">
                             <i class='bx bx-trophy icon'></i>
                             <span class="text nav-text">All Team Score</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id = "management">
+                        <a href="../user/User_Management_Event_Scheduling.php">
+                            <i class='bx bx-briefcase icon'></i>
+                            <span class="text nav-text">Manage Event</span>
                         </a>
                     </li>
                 </ul>
