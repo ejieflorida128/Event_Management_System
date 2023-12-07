@@ -21,24 +21,23 @@
 
                 $checkValue = 1;
 
-               
+                
 
               }
               
             }
 
-            if($checkValue == 1){
-              echo"
-              <script> alert('Username is already taken!');</script>
-               ";
-                      
-            }else{
+            if($checkValue == 0){
 
               $defaultProfile = "../profile_pictures/default.jpg";
               $sql = "INSERT INTO users (username,password,profile) VALUES ('$username','$password','$defaultProfile')";
               mysqli_query($conn,$sql);
 
-                header("Location: index.php");     
+                header("Location: index.php");              
+            }else{
+              echo"
+              <script> alert('Username is already taken!');</script>
+               ";
             }
 
               

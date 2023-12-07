@@ -79,7 +79,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   </div>
 
   <?php
-    if (isset($showModal) && $showModal) {
+    if (isset($showModal)) {
     ?>
         <div class='modal' tabindex='-1' role='dialog' style = ' position: relative; top: 180px; '>
             <div class='modal-dialog'>
