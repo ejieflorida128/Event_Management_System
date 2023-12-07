@@ -8,11 +8,42 @@
 
           if($password == $confirmPassword){
 
-            $defaultProfile = "../profile_pictures/default.jpg";
+
+            $checkforexitingaccount = "SELECT * FROM users";
+            $checkforesult = mysqli_query($conn,$checkforexitingaccount);
+
+            $checkValue = 0;
+
+            while($check = mysqli_fetch_assoc($checkforesult)){
+                
+
+              if($check['username'] == $username){
+
+                $checkValue = 1;
+
+               
+
+              }
+              
+            }
+
+            if($checkValue == 1){
+              echo"
+              <script> alert('Username is already taken!');</script>
+               ";
+                      
+            }else{
+
+              $defaultProfile = "../profile_pictures/default.jpg";
               $sql = "INSERT INTO users (username,password,profile) VALUES ('$username','$password','$defaultProfile')";
               mysqli_query($conn,$sql);
 
-                header("Location: index.php");
+                header("Location: index.php");     
+            }
+
+              
+
+          
               
 
           }else{
