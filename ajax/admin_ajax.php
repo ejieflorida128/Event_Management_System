@@ -1,7 +1,16 @@
  <?php
     include("../conn/connection.php");
 
-    // Ajax for inserting data into the database for the "add_event" action
+    // management line 13 - 317
+    // eventlist 747 - 926
+    //profile line 326 - 502
+    //teamscore 518 - 736
+    
+
+
+
+
+    // query connected to ajax for inserting data into the database for the "add_event" action
     if (isset($_POST['value']) && $_POST['value'] == "add") {
 
         $teamA = $_POST['teamA'];
@@ -14,7 +23,7 @@
         mysqli_query($conn, $sql);
     }
 
-    //ajax for showing the details from sa databse para ma hibaw an natu unsay atu editon
+    //ajax for showing the details from sa databse para ma hibaw an natu unsay atu editon just for displaying
     if(isset($_POST['id'])){
         $user_id = $_POST['id'];
 
@@ -32,7 +41,7 @@
         $response['message'] = "Invalid or Data Information!";
     }
 
-    // ajax para ma fuction nanatu and if atu clickon ma edit najud sija
+    // query connected to ajax para ma fuction nanatu and if atu clickon ma edit najud sija ija najud e handle and edition 
     if(isset($_POST['hiddendata'])){
         $uniqueid = $_POST['hiddendata'];
 
@@ -57,7 +66,7 @@
 
 
 
- // Ajax for displaying the log_info table and search ASC
+ // query connected to ajax for displaying the management table and search ASC
 if (isset($_POST['log_info']) && $_POST['log_info'] == true) {
     // Check if searchValue is set and not empty
     $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -121,7 +130,7 @@ if (isset($_POST['log_info']) && $_POST['log_info'] == true) {
 }
 
 
-// Ajax for displaying the log_info table and search DESC
+// query connected to Ajax for displaying the management table and search DESC
 if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     // Check if searchValue is set and not empty
     $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -192,7 +201,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
 
-    //ajax for deleting an event
+    //query connected to ajax for deleting an event
     if(isset($_POST['deleteID'])){
         $id = $_POST['deleteID'];
 
@@ -204,7 +213,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
     
-    //table para sa request log
+    // query connected to ajax para maka create ug table para sa request log
      if (isset($_POST['TableReportLog']) && $_POST['TableReportLog'] == true) {
         echo '<div class="table scrollable-table">';
         $table = '<table class="table table-bordered table-hover">
@@ -254,7 +263,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         echo '</div>';
     }
 
-    //hadndling the function to display the information para sa request log
+    //handling the function to display the information para sa request log if atu clickon and view button it will display all the value on the selected request
     if(isset($_POST['report_id'])){
 
         $r = $_POST['report_id'];
@@ -398,7 +407,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         echo '</div>';
     }
     
-    // Ajax for displaying the log_info table and search DESC
+    // query connected to Ajax for displaying the profile table and search DESC
     if (isset($_POST['profileDESC']) && $_POST['profileDESC'] == true) {
          // Check if searchValue is set and not empty
          $value = isset($_POST['searchValueforProfile']) ? $_POST['searchValueforProfile'] : NULL;
@@ -483,7 +492,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
     }
 
 
-    //ajax for deleting a profile in the profile section
+    // query connected to ajax for deleting a profile in the profile section
     if(isset($_POST['deleteIDfromProfile'])){
         $id = $_POST['deleteIDfromProfile'];
 
@@ -506,7 +515,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
     
-     // Ajax for displaying the teamScore table and search ASC
+     //query connected to Ajax for displaying the teamScore table and search ASC
      if (isset($_POST['displayTeamScoreASC']) && $_POST['displayTeamScoreASC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -584,7 +593,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         echo '</div>';
     }
     
-    // Ajax for displaying the teamScore table and search DESC
+    //query connected to Ajax for displaying the teamScore table and search DESC
     if (isset($_POST['displayTeamScoreDESC']) && $_POST['displayTeamScoreDESC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -668,7 +677,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
 
-     //ajax for showing the details from sa databse para ma hibaw and mga score and para ne sa score
+     //query connected to ajax for showing the details if atu pindoton and View na button
      if(isset($_POST['view_score_id'])){
         $user_id = $_POST['view_score_id'];
 
@@ -688,7 +697,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
     
   
-    //ajax for showing the details from sa databse para ma scoran na ang team
+    // query connected to ajax for showing the details if atu clickon ang Score na button but wla na naka disabled and score para ma edit
      if(isset($_POST['score_id'])){
         $user_id = $_POST['score_id'];
 
@@ -712,7 +721,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
 
-    //ajax for scoring it or score an event
+    //query connected to ajax for scoring it or score an event . para maka score nata and update to DB
     if(isset($_POST['toScore'])){
 
         $id = $_POST['toScore'];
@@ -735,7 +744,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
 
-     // Ajax for displaying the Event List table and search ASC
+     // query connected to Ajax for displaying the Event List table and search ASC
      if (isset($_POST['displayEventListASC']) && $_POST['displayEventListASC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -800,7 +809,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         echo '</div>';
     }
     
-    // Ajax for displaying the EventList table and search DESC
+    // query connected to Ajax for displaying the EventList table and search DESC
     if (isset($_POST['displayEventListDESC']) && $_POST['displayEventListDESC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -872,7 +881,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
 
-     //ajax for showing the details from sa databse para ma hibaw and mga details  and sa show details sa event list
+     // query connected to ajax for showing the details from sa databse para ma hibaw and mga details  and sa show details sa event list AND if i click the View Details Button
      if(isset($_POST['details_id'])){
         $user_id = $_POST['details_id'];
 
@@ -899,7 +908,7 @@ if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
 
 
 
-    //ajax for scoring it or score an event
+    //query connected to ajax for Editing Information of an event IF i click the Edit button
     if(isset($_POST['eventListid'])){
         $id = $_POST['eventListid'];
 

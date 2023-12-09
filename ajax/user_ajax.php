@@ -3,11 +3,19 @@
     session_start();
 
 
+    //profile line 203 - 250
+    //eventlist 456 - 
+    //eventScore 259 - 444
+    //Management line 18 - 198
+
+    
+
+
    
 
    
         
-   // Ajax for displaying the log_info table and search ASC
+   // query connected to Ajax for displaying the log_info table and search ASC
     if (isset($_POST['log_info']) && $_POST['log_info'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -73,7 +81,9 @@
         echo '</div>';
     }
     
-    // Ajax for displaying the log_info table and search DESC
+
+
+    // query connected to Ajax for displaying the log_info table and search DESC
     if (isset($_POST['log_info_R']) && $_POST['log_info_R'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -147,7 +157,7 @@
 
 
 
-    // request and showing data gikan database para makita unsay editon
+    // query connected to ajax for requesting and showing data gikan database para makita unsay editon if atu clickon and request button
     if(isset($_POST['idRequest'])){
         $user_id = $_POST['idRequest'];
 
@@ -167,7 +177,7 @@
 
 
 
-    //ajax para ma process and report sa user or player
+    //query connected to ajax para ma process and report sa user if atu pindoton and Send Request nga button 
     if(isset($_POST['user_id'])){
 
         $reportTeamOne = $_POST['reportTeamOne'];
@@ -190,8 +200,7 @@
 
 
 
-    //para ne makita ang data gikan sa database if mag kuan sa user's profile
-
+    // query connected to ajax para ne makita ang informations sa user gikan sa database if redirect ka sa profile na section
     if(isset($_POST['userProfileId'])){
         $user_id = $_POST['userProfileId'];
 
@@ -214,7 +223,7 @@
 
 
 
-   //edit profile in the profile section
+   //query connected to edit profile in the profile section and mu gana ra sija if atu clickon ang Confirm Edit na Button
             if(isset($_POST['fullname']) && isset($_POST['age']) && isset($_POST['gmail'])){
                 $age = $_POST['age'];
                 $fullname = $_POST['fullname'];
@@ -247,7 +256,7 @@
 
 
 
-// Ajax for displaying the teamScore table and search ASC
+//query connected to Ajax for displaying the teamScore table and search ASC
      if (isset($_POST['displayTeamScoreASC']) && $_POST['displayTeamScoreASC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -329,7 +338,7 @@
     }
     
 
-    // Ajax for displaying the teamScore table and search DESC
+    //query connected to Ajax for displaying the teamScore table and search DESC
     if (isset($_POST['displayTeamScoreDESC']) && $_POST['displayTeamScoreDESC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -416,7 +425,7 @@
 
 
 
-     //ajax for showing the details from sa databse para ma hibaw and mga score and para ne sa score
+     //query connected to ajax for showing the score in the database if clickon nimo and View button
      if(isset($_POST['view_score_id'])){
         $user_id = $_POST['view_score_id'];
 
@@ -444,7 +453,7 @@
 
 
 
-    // Ajax for displaying the Event List table and search ASC
+    //query connected to Ajax for displaying the Event List table and search ASC
     if (isset($_POST['displayEventListASC']) && $_POST['displayEventListASC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -508,7 +517,7 @@
         echo '</div>';
     }
     
-    // Ajax for displaying the EventList table and search DESC
+    //query connected to Ajax for displaying the EventList table and search DESC
     if (isset($_POST['displayEventListDESC']) && $_POST['displayEventListDESC'] == true) {
         // Check if searchValue is set and not empty
         $value = isset($_POST['searchValue']) ? $_POST['searchValue'] : NULL;
@@ -579,7 +588,7 @@
 
 
 
-     //ajax for showing the details from sa databse para ma hibaw and mga details  and sa show details sa event list
+     // query connected to ajax for showing the details from sa Database if ahua clickon ang View Details na button
      if(isset($_POST['details_id'])){
         $user_id = $_POST['details_id'];
 

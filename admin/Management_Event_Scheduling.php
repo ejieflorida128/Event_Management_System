@@ -246,7 +246,7 @@ include("../includes/footer.php");
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-                    Are you sure to delete this profile?
+                    Are you sure to delete this Event?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -527,7 +527,6 @@ include("../includes/footer.php");
         }
 
         //to show the details in the report log
-
         function showDetailsinTheReportLog(){
 
             var report_id = $('#HiddenReportId').val();

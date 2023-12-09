@@ -31,7 +31,9 @@
               if($checkValue == 0){
   
                 $defaultProfile = "../profile_pictures/default.jpg";
-                $sql = "INSERT INTO users (username,password,profile) VALUES ('$username','$password','$defaultProfile')";
+                $defaultFullname = "No Information Provided yet!";
+                $defaultGmail = "No Information Provided yet!";
+                $sql = "INSERT INTO users (username,password,profile,fullname,age,gmail) VALUES ('$username','$password','$defaultProfile','$defaultFullname','0','$defaultGmail')";
                 mysqli_query($conn,$sql);
   
                   header("Location: index.php");              
@@ -207,7 +209,7 @@
     ?>
 
 
-
+    
 
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-GLhlTQ8iKt6vXvzttzK4+OqjL+6d66t2ayxu/8PUHjOpG8WUmNu2Ck6Z5mmg5I62" crossorigin="anonymous"></script>
